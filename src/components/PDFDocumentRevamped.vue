@@ -1,15 +1,15 @@
 <template>
   <ScrollingDocument
     class="pdf-document"
-    v-bind="{pages, pageCount, currentPage}"
-    v-slot="{page, isPageFocused, isElementFocused}"
+    v-bind="{ pages, pageCount, currentPage }"
+    v-slot="{ page, isPageFocused, isElementFocused }"
     :enable-page-jump="true"
     @page-jump="onPageJump"
     @pages-fetch="onPagesFetch"
     @pages-reset="fitWidth"
-    >
+  >
     <PDFPage
-      v-bind="{scale, optimalScale, page, isPageFocused, isElementFocused}"
+      v-bind="{ scale, optimalScale, page, isPageFocused, isElementFocused }"
       @page-rendered="onPageRendered"
       @page-errored="onPageErrored"
       @page-focus="onPageFocused"
@@ -107,9 +107,9 @@ export default {
       this.updateScale(scale);
     },
 
-    updateScale(scale, {isOptimal = false} = {}) {
+    updateScale(scale, { isOptimal = false } = {}) {
       if (!scale) return;
-      this.$emit('scale-change', {scale, isOptimal});
+      this.$emit("scale-change", { scale, isOptimal });
     },
 
     onPageJump(scrollTop) {
