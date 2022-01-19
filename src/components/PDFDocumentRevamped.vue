@@ -22,13 +22,12 @@
 // PDF.js and <canvas>. Currently does not support,
 // rendering of selected pages (but could be easily
 // updated to do so).
-import {PIXEL_RATIO, VIEWPORT_RATIO} from '../utils/constants';
-
-import ScrollingDocument from './ScrollingDocument';
-import PDFPage from './PDFPage';
+import { PIXEL_RATIO, VIEWPORT_RATIO } from "../utils/constants";
+import PDFPage from "./PDFPage";
+import ScrollingDocument from "./ScrollingDocument";
 
 export default {
-  name: 'PDFDocument',
+  name: "PDFDocument",
 
   components: {
     ScrollingDocument,
@@ -148,8 +147,8 @@ export default {
           break;
       }
     },
-    pageCount: 'fitWidth',
-    isPreviewEnabled: 'fitWidth',
+    pageCount: "fitWidth",
+    isPreviewEnabled: "fitWidth",
   },
 };
 </script>
